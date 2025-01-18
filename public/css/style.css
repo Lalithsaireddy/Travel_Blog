@@ -1,3 +1,127 @@
-body{
-    background-color: rgb(57, 152, 235);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --black : #1c1c1c;
+    --gray : #7E7E7E;
+    --gray-light : #E4E4E4;
+    --red : #b30000;
+    --font-size-base : 1rem ;
+    --font-sixe-md : clamp(1.25rem , 0.61vw + 1.1rem , 1.58rem);
+    --font-size-lg : clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+    --font-size-xl : clamp(2.44rem, 2.38vw +1.85rem. 3.75rem);
+    --border-radius : 10px;
 }
+
+body{
+    font-family: 'Open Sans', sans-serif;
+     font-style: italic;
+     color : var(--black);
+    background-color: #FAF5EE;
+    background-image : url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMDktYWRqLTE0LmpwZw.jpg");
+    background-size: cover; /* or use contain if you prefer */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%; 
+    height: 100%; /* Fills the viewport height */
+    margin : 0;
+
+}
+
+image[type ="text"],
+image[type ="password"],
+image[type ="email"],
+image[type ="search"],
+select,
+textarea {
+    font-family : var(--font-size-base);
+    display : block;
+    box-sizing : border-box;
+    width : 100%;
+    padding : 0.7rem 0.75rem;
+    margin-bottom : 1rem;
+
+}
+.btn {
+    background-color : var(--black);
+    border : none;
+    color : white;
+    padding : 16px 32px;
+    text-decoration : none;
+    margin : 4px 2px;
+    cursor : pointer;
+
+}
+.btn-delete{
+    padding : 10px 16px;
+    background-color : var(--red);
+}
+
+img {
+    width : 100%;
+    height : auto;
+}
+
+
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+    .container {
+        max-width : 982px;
+        margin : 0 auto ;
+        padding : 0 10px;
+    }
+    .main {
+        padding : 20px 0;
+
+    }
+    
+    .mySlides { display: none; } 
+    .mySlides img { 
+        width: 100%; 
+         height: 450px; 
+          object-fit: cover; 
+          
+          filter : drop-shadow(0px 44px 34px rgba(0,0,0,0.25));
+          border : var (--border-radius);
+    }
+    .text {
+        font-size: 20px; 
+        opacity: 0;
+         transform: translateY(20px); 
+         animation: fadeIn 2s ease-out forwards;
+        position: absolute;
+        width : 800px ;
+        height : auto;
+        bottom: 8px;
+        left: 10px;
+        color: white;
+        
+        padding: 6px 12px; /* Smaller padding */
+        background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+      }
+      
+
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+    @keyframes fadeIn 
+    { 
+        to { opacity: 1; 
+            transform: translateY(0); 
+        } 
+    }
