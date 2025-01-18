@@ -5,8 +5,8 @@ const router = express.Router();
 router.get('/',(req,res)=>{
 
     const locals = {
-       title : "My-Tailor-App",
-       description :"Selling World-class clothes to your door step"
+       title : "Wandermap",
+       description :"My Personailzed and Lavish Expeience of UI/UX"
 
     }
     res.render('index',locals);
