@@ -1,12 +1,12 @@
 require('dotenv').config();
-
+const connect = require('./server/config/data')
 const express = require('express');
 
 const app = express();
 const PORT = 3000 || process.env.PORT;
 app.use(express.static('public'));
 const expresslayout = require('express-ejs-layouts');
-
+connect();
 app.use(expresslayout);
 app.set('view engine','ejs');
 app.set('layout','./layouts/main');
